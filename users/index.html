@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>OraFoot</title>
+    <meta content="Admin Dashboard" name="description" />
+    <meta content="ThemeDesign" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+    <!--Morris Chart CSS -->
+    <link rel="stylesheet" href="../assets/plugins/morris/morris.css">
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="../assets/icons/tabler/tabler-icons.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body class="fixed-left">
+
+    <!-- Loader -->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left side-menu">
+            <button type="button" class="button-menu-mobile button-menu-mobile-topbar open-left waves-effect">
+                <i class="ion-close"></i>
+            </button>
+
+            <div class="left-side-logo d-block d-lg-none">
+                <div class="text-center">
+
+                    <a href="../index.html" class="logo"><img src="../assets/images/orafoot.svg" height="20"
+                            alt="logo"></a>
+                </div>
+            </div>
+
+            <div class="sidebar-inner slimscrollleft">
+
+                <div id="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">Main</li>
+
+                        <li>
+                            <a href="index.html" class="waves-effect">
+                                <i class="dripicons-meter"></i>
+                                <span> Dashboard </span>
+                            </a>
+                        </li>
+
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><i class="ti ti-users"></i> <span> Users
+                                </span> <span class="menu-arrow float-right"><i
+                                        class="mdi mdi-chevron-right"></i></span></a>
+                            <ul class="list-unstyled">
+                                <li><a href="../users/index.html">List</a></li>
+                                <li><a href="../users/subscriptions.html">Subscriptions</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><i class="ti ti-building-stadium"></i>
+                                <span> Stadiums </span> <span class="menu-arrow float-right"><i
+                                        class="mdi mdi-chevron-right"></i></span></a>
+                            <ul class="list-unstyled">
+                                <li><a href="../stadiums.html">List</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="../referees.html" class="waves-effect"><i class="ti ti-users-group"></i><span>
+                                    Referees </span></a>
+                        </li>
+
+                        <li>
+                            <a href="../teams.html" class="waves-effect"><i class="ti ti-soccer-field"></i><span> Teams
+                                </span></a>
+                        </li>
+
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><i class="ti ti-tournament"></i> <span>
+                                    Sports courses </span> <span class="menu-arrow float-right"><i
+                                        class="mdi mdi-chevron-right"></i></span></a>
+                            <ul class="list-unstyled">
+                                <li><a href="./courses/index.html">List</a></li>
+                                <li><a href="./courses/matches.html">Matches</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="../photographers.html" class="waves-effect"><i class="ti ti-photo-scan"></i><span>
+                                    Photographers </span></a>
+                        </li>
+
+                        <li class="menu-title">Extra</li>
+
+                        <li>
+                            <a href="../notifications.html" class="waves-effect"><i class="ti ti-bell"></i><span>
+                                    Notifications </span></a>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div> <!-- end sidebarinner -->
+        </div>
+        <!-- Left Sidebar End -->
+
+        <!-- Start right Content here -->
+
+        <div class="content-page">
+            <!-- Start content -->
+            <div class="content">
+
+                <!-- Top Bar Start -->
+                <div class="topbar">
+
+                    <div class="topbar-left	d-none d-lg-block">
+                        <div class="text-center">
+
+                            <a href="index.html" class="logo"><img src="../assets/images/orafoot.svg" height="40"
+                                    alt="logo"></a>
+                        </div>
+                    </div>
+
+                    <nav class="navbar-custom">
+
+                        <ul class="list-inline float-right mb-0">
+                            <li class="list-inline-item notification-list dropdown d-none d-sm-inline-block">
+                                <form role="search" class="app-search">
+                                    <div class="form-group mb-0">
+                                        <input type="text" class="form-control" placeholder="Search..">
+                                        <button type="submit"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </form>
+                            </li>
+
+                            <li class="list-inline-item dropdown notification-list">
+                                <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user"
+                                    data-toggle="dropdown" href="#" role="button" aria-haspopup="false"
+                                    aria-expanded="false">
+                                    <img src="../assets/images/users/user-1.jpg" alt="user" class="rounded-circle">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated profile-dropdown ">
+                                    <a class="dropdown-item" href="#"><i
+                                            class="mdi mdi-account-circle m-r-5 text-muted"></i> Profile</a>
+                                    <a class="dropdown-item" href="#"><span
+                                            class="badge badge-success mt-1 float-right">5</span><i
+                                            class="mdi mdi-settings m-r-5 text-muted"></i> Settings</a>
+                                    <a class="dropdown-item" href="#"><i
+                                            class="mdi mdi-lock-open-outline m-r-5 text-muted"></i> Lock screen</a>
+                                    <a class="dropdown-item" href="#"><i class="mdi mdi-logout m-r-5 text-muted"></i>
+                                        Logout</a>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                        <ul class="list-inline menu-left mb-0">
+                            <li class="list-inline-item">
+                                <button type="button" class="button-menu-mobile open-left waves-effect">
+                                    <i class="ion-navicon"></i>
+                                </button>
+                            </li>
+                        </ul>
+
+                        <div class="clearfix"></div>
+
+                    </nav>
+
+                </div>
+                <!-- Top Bar End -->
+
+                <div class="page-content-wrapper ">
+
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="float-right page-breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#">Drixo</a></li>
+                                        <li class="breadcrumb-item active">Dashboard</li>
+                                    </ol>
+                                </div>
+                                <h5 class="page-title">Users</h5>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card m-b-30">
+                                    <div class="card-body">
+                                        <h4 class="mt-0 header-title">Example</h4>
+                                        <p class="text-muted m-b-30 font-14">This is an experimental awesome solution
+                                            for responsive tables with complex data.</p>
+                                        <div class="d-flex justify-content-end mb-3">
+                                            <a type="button" href="./create.html" class="btn btn-primary waves-effect waves-light">Create new user</a>
+                                        </div>
+                                        <div class="table-rep-plugin">
+                                            <div class="table-responsive b-0" data-pattern="priority-columns">
+                                                <table id="tech-companies-1" class="table  table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>ID</th>
+                                                            <th data-priority="1">Full Name</th>
+                                                            <th data-priority="3">Email</th>
+                                                            <th data-priority="1">Phone</th>
+                                                            <th data-priority="3">Role</th>
+                                                            <th data-priority="3">Status</th>
+                                                            <th data-priority="6">Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>01</th>
+                                                            <th>jhon Doe</th>
+                                                            <td>jhon@mail.com</td>
+                                                            <td>+1658 4588 9874</td>
+                                                            <td><span class="badge badge-info">User</span></td>
+                                                            <td><span class="badge badge-primary">Active</span></td>
+                                                            <td>
+                                                                <div class="btn-group m-b-10">
+                                                                    <button type="button"
+                                                                        class="btn btn-primary">Action</button>
+                                                                    <button type="button"
+                                                                        class="btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split"
+                                                                        data-toggle="dropdown" aria-haspopup="true"
+                                                                        aria-expanded="false">
+                                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                                    </button>
+                                                                    <div class="dropdown-menu" style="">
+                                                                        <a class="dropdown-item" href="#">Action</a>
+                                                                        <a class="dropdown-item" href="#">Another
+                                                                            action</a>
+                                                                        <a class="dropdown-item" href="#">Something else
+                                                                            here</a>
+                                                                        <div class="dropdown-divider"></div>
+                                                                        <a class="dropdown-item" href="#">Separated
+                                                                            link</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th>01</th>
+                                                            <th>jhon Doe</th>
+                                                            <td>jhon@mail.com</td>
+                                                            <td>+1658 4588 9874</td>
+                                                            <td><span class="badge badge-info">User</span></td>
+                                                            <td><span class="badge badge-primary">Active</span></td>
+                                                            <td>
+                                                                <div class="btn-group m-b-10">
+                                                                    <button type="button"
+                                                                        class="btn btn-primary">Action</button>
+                                                                    <button type="button"
+                                                                        class="btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split"
+                                                                        data-toggle="dropdown" aria-haspopup="true"
+                                                                        aria-expanded="false">
+                                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                                    </button>
+                                                                    <div class="dropdown-menu" style="">
+                                                                        <a class="dropdown-item" href="#">Action</a>
+                                                                        <a class="dropdown-item" href="#">Another
+                                                                            action</a>
+                                                                        <a class="dropdown-item" href="#">Something else
+                                                                            here</a>
+                                                                        <div class="dropdown-divider"></div>
+                                                                        <a class="dropdown-item" href="#">Separated
+                                                                            link</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th>01</th>
+                                                            <th>jhon Doe</th>
+                                                            <td>jhon@mail.com</td>
+                                                            <td>+1658 4588 9874</td>
+                                                            <td><span class="badge badge-info">User</span></td>
+                                                            <td><span class="badge badge-primary">Active</span></td>
+                                                            <td>
+                                                                <div class="btn-group m-b-10">
+                                                                    <button type="button"
+                                                                        class="btn btn-primary">Action</button>
+                                                                    <button type="button"
+                                                                        class="btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split"
+                                                                        data-toggle="dropdown" aria-haspopup="true"
+                                                                        aria-expanded="false">
+                                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                                    </button>
+                                                                    <div class="dropdown-menu" style="">
+                                                                        <a class="dropdown-item" href="#">Action</a>
+                                                                        <a class="dropdown-item" href="#">Another
+                                                                            action</a>
+                                                                        <a class="dropdown-item" href="#">Something else
+                                                                            here</a>
+                                                                        <div class="dropdown-divider"></div>
+                                                                        <a class="dropdown-item" href="#">Separated
+                                                                            link</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th>01</th>
+                                                            <th>jhon Doe</th>
+                                                            <td>jhon@mail.com</td>
+                                                            <td>+1658 4588 9874</td>
+                                                            <td><span class="badge badge-info">User</span></td>
+                                                            <td><span class="badge badge-primary">Active</span></td>
+                                                            <td>
+                                                                <div class="btn-group m-b-10">
+                                                                    <button type="button"
+                                                                        class="btn btn-primary">Action</button>
+                                                                    <button type="button"
+                                                                        class="btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split"
+                                                                        data-toggle="dropdown" aria-haspopup="true"
+                                                                        aria-expanded="false">
+                                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                                    </button>
+                                                                    <div class="dropdown-menu" style="">
+                                                                        <a class="dropdown-item" href="#">Action</a>
+                                                                        <a class="dropdown-item" href="#">Another
+                                                                            action</a>
+                                                                        <a class="dropdown-item" href="#">Something else
+                                                                            here</a>
+                                                                        <div class="dropdown-divider"></div>
+                                                                        <a class="dropdown-item" href="#">Separated
+                                                                            link</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th>01</th>
+                                                            <th>jhon Doe</th>
+                                                            <td>jhon@mail.com</td>
+                                                            <td>+1658 4588 9874</td>
+                                                            <td><span class="badge badge-info">User</span></td>
+                                                            <td><span class="badge badge-primary">Active</span></td>
+                                                            <td>
+                                                                <div class="btn-group m-b-10">
+                                                                    <button type="button"
+                                                                        class="btn btn-primary">Action</button>
+                                                                    <button type="button"
+                                                                        class="btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split"
+                                                                        data-toggle="dropdown" aria-haspopup="true"
+                                                                        aria-expanded="false">
+                                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                                    </button>
+                                                                    <div class="dropdown-menu" style="">
+                                                                        <a class="dropdown-item" href="#">Action</a>
+                                                                        <a class="dropdown-item" href="#">Another
+                                                                            action</a>
+                                                                        <a class="dropdown-item" href="#">Something else
+                                                                            here</a>
+                                                                        <div class="dropdown-divider"></div>
+                                                                        <a class="dropdown-item" href="#">Separated
+                                                                            link</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th>01</th>
+                                                            <th>jhon Doe</th>
+                                                            <td>jhon@mail.com</td>
+                                                            <td>+1658 4588 9874</td>
+                                                            <td><span class="badge badge-info">User</span></td>
+                                                            <td><span class="badge badge-primary">Active</span></td>
+                                                            <td>
+                                                                <div class="btn-group m-b-10">
+                                                                    <button type="button"
+                                                                        class="btn btn-primary">Action</button>
+                                                                    <button type="button"
+                                                                        class="btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split"
+                                                                        data-toggle="dropdown" aria-haspopup="true"
+                                                                        aria-expanded="false">
+                                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                                    </button>
+                                                                    <div class="dropdown-menu" style="">
+                                                                        <a class="dropdown-item" href="#">Action</a>
+                                                                        <a class="dropdown-item" href="#">Another
+                                                                            action</a>
+                                                                        <a class="dropdown-item" href="#">Something else
+                                                                            here</a>
+                                                                        <div class="dropdown-divider"></div>
+                                                                        <a class="dropdown-item" href="#">Separated
+                                                                            link</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th>01</th>
+                                                            <th>jhon Doe</th>
+                                                            <td>jhon@mail.com</td>
+                                                            <td>+1658 4588 9874</td>
+                                                            <td><span class="badge badge-info">User</span></td>
+                                                            <td><span class="badge badge-primary">Active</span></td>
+                                                            <td>
+                                                                <div class="btn-group m-b-10">
+                                                                    <button type="button"
+                                                                        class="btn btn-primary">Action</button>
+                                                                    <button type="button"
+                                                                        class="btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split"
+                                                                        data-toggle="dropdown" aria-haspopup="true"
+                                                                        aria-expanded="false">
+                                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                                    </button>
+                                                                    <div class="dropdown-menu" style="">
+                                                                        <a class="dropdown-item" href="#">Action</a>
+                                                                        <a class="dropdown-item" href="#">Another
+                                                                            action</a>
+                                                                        <a class="dropdown-item" href="#">Something else
+                                                                            here</a>
+                                                                        <div class="dropdown-divider"></div>
+                                                                        <a class="dropdown-item" href="#">Separated
+                                                                            link</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th>01</th>
+                                                            <th>jhon Doe</th>
+                                                            <td>jhon@mail.com</td>
+                                                            <td>+1658 4588 9874</td>
+                                                            <td><span class="badge badge-info">User</span></td>
+                                                            <td><span class="badge badge-primary">Active</span></td>
+                                                            <td>
+                                                                <div class="btn-group m-b-10">
+                                                                    <button type="button"
+                                                                        class="btn btn-primary">Action</button>
+                                                                    <button type="button"
+                                                                        class="btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split"
+                                                                        data-toggle="dropdown" aria-haspopup="true"
+                                                                        aria-expanded="false">
+                                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                                    </button>
+                                                                    <div class="dropdown-menu" style="">
+                                                                        <a class="dropdown-item" href="#">Action</a>
+                                                                        <a class="dropdown-item" href="#">Another
+                                                                            action</a>
+                                                                        <a class="dropdown-item" href="#">Something else
+                                                                            here</a>
+                                                                        <div class="dropdown-divider"></div>
+                                                                        <a class="dropdown-item" href="#">Separated
+                                                                            link</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th>01</th>
+                                                            <th>jhon Doe</th>
+                                                            <td>jhon@mail.com</td>
+                                                            <td>+1658 4588 9874</td>
+                                                            <td><span class="badge badge-info">User</span></td>
+                                                            <td><span class="badge badge-primary">Active</span></td>
+                                                            <td>
+                                                                <div class="btn-group m-b-10">
+                                                                    <button type="button"
+                                                                        class="btn btn-primary">Action</button>
+                                                                    <button type="button"
+                                                                        class="btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split"
+                                                                        data-toggle="dropdown" aria-haspopup="true"
+                                                                        aria-expanded="false">
+                                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                                    </button>
+                                                                    <div class="dropdown-menu" style="">
+                                                                        <a class="dropdown-item" href="#">Action</a>
+                                                                        <a class="dropdown-item" href="#">Another
+                                                                            action</a>
+                                                                        <a class="dropdown-item" href="#">Something else
+                                                                            here</a>
+                                                                        <div class="dropdown-divider"></div>
+                                                                        <a class="dropdown-item" href="#">Separated
+                                                                            link</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th>01</th>
+                                                            <th>jhon Doe</th>
+                                                            <td>jhon@mail.com</td>
+                                                            <td>+1658 4588 9874</td>
+                                                            <td><span class="badge badge-info">User</span></td>
+                                                            <td><span class="badge badge-primary">Active</span></td>
+                                                            <td>
+                                                                <div class="btn-group m-b-10">
+                                                                    <button type="button"
+                                                                        class="btn btn-primary">Action</button>
+                                                                    <button type="button"
+                                                                        class="btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split"
+                                                                        data-toggle="dropdown" aria-haspopup="true"
+                                                                        aria-expanded="false">
+                                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                                    </button>
+                                                                    <div class="dropdown-menu" style="">
+                                                                        <a class="dropdown-item" href="#">Action</a>
+                                                                        <a class="dropdown-item" href="#">Another
+                                                                            action</a>
+                                                                        <a class="dropdown-item" href="#">Something else
+                                                                            here</a>
+                                                                        <div class="dropdown-divider"></div>
+                                                                        <a class="dropdown-item" href="#">Separated
+                                                                            link</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th>01</th>
+                                                            <th>jhon Doe</th>
+                                                            <td>jhon@mail.com</td>
+                                                            <td>+1658 4588 9874</td>
+                                                            <td><span class="badge badge-info">User</span></td>
+                                                            <td><span class="badge badge-primary">Active</span></td>
+                                                            <td>
+                                                                <div class="btn-group m-b-10">
+                                                                    <button type="button"
+                                                                        class="btn btn-primary">Action</button>
+                                                                    <button type="button"
+                                                                        class="btn btn-primary btn-sm dropdown-toggle dropdown-toggle-split"
+                                                                        data-toggle="dropdown" aria-haspopup="true"
+                                                                        aria-expanded="false">
+                                                                        <span class="sr-only">Toggle Dropdown</span>
+                                                                    </button>
+                                                                    <div class="dropdown-menu" style="">
+                                                                        <a class="dropdown-item" href="#">Action</a>
+                                                                        <a class="dropdown-item" href="#">Another
+                                                                            action</a>
+                                                                        <a class="dropdown-item" href="#">Something else
+                                                                            here</a>
+                                                                        <div class="dropdown-divider"></div>
+                                                                        <a class="dropdown-item" href="#">Separated
+                                                                            link</a>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+
+                    </div><!-- container fluid -->
+
+                </div> <!-- Page content Wrapper -->
+
+            </div> <!-- content -->
+
+
+        </div>
+        <!-- End Right content here -->
+
+    </div>
+    <!-- END wrapper -->
+
+
+    <!-- jQuery  -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/modernizr.min.js"></script>
+    <script src="../assets/js/detect.js"></script>
+    <script src="../assets/js/fastclick.js"></script>
+    <script src="../assets/js/jquery.slimscroll.js"></script>
+    <script src="../assets/js/jquery.blockUI.js"></script>
+    <script src="../assets/js/waves.js"></script>
+    <script src="../assets/js/jquery.nicescroll.js"></script>
+    <script src="../assets/js/jquery.scrollTo.min.js"></script>
+
+    <!-- skycons -->
+    <script src="../assets/plugins/skycons/skycons.min.js"></script>
+
+    <!-- skycons -->
+    <script src="../assets/plugins/peity/jquery.peity.min.js"></script>
+
+    <!--Morris Chart-->
+    <script src="../assets/plugins/morris/morris.min.js"></script>
+    <script src="../assets/plugins/raphael/raphael-min.js"></script>
+
+    <!-- dashboard -->
+    <script src="../assets/pages/dashboard.js"></script>
+
+    <!-- App js -->
+    <script src="../assets/js/app.js"></script>
+
+</body>
+
+</html>

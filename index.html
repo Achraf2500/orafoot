@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>OraFoot</title>
+    <meta content="Admin Dashboard" name="description" />
+    <meta content="ThemeDesign" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!--Morris Chart CSS -->
+    <link rel="stylesheet" href="assets/plugins/morris/morris.css">
+
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="assets/icons/tabler/tabler-icons.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+
+<body class="fixed-left">
+
+    <!-- Loader -->
+    <div id="preloader">
+        <div id="status">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left side-menu">
+            <button type="button" class="button-menu-mobile button-menu-mobile-topbar open-left waves-effect">
+                <i class="ion-close"></i>
+            </button>
+
+            <div class="left-side-logo d-block d-lg-none">
+                <div class="text-center">
+
+                    <a href="index.html" class="logo"><img src="assets/images/orafoot.svg" height="20" alt="logo"></a>
+                </div>
+            </div>
+
+            <div class="sidebar-inner slimscrollleft">
+
+                <div id="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">Main</li>
+
+                        <li>
+                            <a href="index.html" class="waves-effect">
+                                <i class="dripicons-meter"></i>
+                                <span> Dashboard </span>
+                            </a>
+                        </li>
+
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><i class="ti ti-users"></i> <span> Users
+                                </span> <span class="menu-arrow float-right"><i
+                                        class="mdi mdi-chevron-right"></i></span></a>
+                            <ul class="list-unstyled">
+                                <li><a href="./users/index.html">List</a></li>
+                                <li><a href="./users/subscriptions.html">Subscriptions</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><i class="ti ti-building-stadium"></i>
+                                <span> Stadiums </span> <span class="menu-arrow float-right"><i
+                                        class="mdi mdi-chevron-right"></i></span></a>
+                            <ul class="list-unstyled">
+                                <li><a href="stadiums.html">List</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="referees.html" class="waves-effect"><i class="ti ti-users-group"></i><span>
+                                    Referees </span></a>
+                        </li>
+
+                        <li>
+                            <a href="teams.html" class="waves-effect"><i class="ti ti-soccer-field"></i><span> Teams
+                                </span></a>
+                        </li>
+
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><i class="ti ti-tournament"></i> <span>
+                                    Sports courses </span> <span class="menu-arrow float-right"><i
+                                        class="mdi mdi-chevron-right"></i></span></a>
+                            <ul class="list-unstyled">
+                                <li><a href="./courses/index.html">List</a></li>
+                                <li><a href="./courses/matches.html">Matches</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="photographers.html" class="waves-effect"><i class="ti ti-photo-scan"></i><span>
+                                    Photographers </span></a>
+                        </li>
+
+                        <li class="menu-title">Extra</li>
+
+                        <li>
+                            <a href="notifications.html" class="waves-effect"><i class="ti ti-bell"></i><span>
+                                    Notifications </span></a>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div> <!-- end sidebarinner -->
+        </div>
+        <!-- Left Sidebar End -->
+
+        <!-- Start right Content here -->
+
+        <div class="content-page">
+            <!-- Start content -->
+            <div class="content">
+
+                <!-- Top Bar Start -->
+                <div class="topbar">
+
+                    <div class="topbar-left	d-none d-lg-block">
+                        <div class="text-center">
+
+                            <a href="index.html" class="logo"><img src="assets/images/orafoot.svg" height="40"
+                                    alt="logo"></a>
+                        </div>
+                    </div>
+
+                    <nav class="navbar-custom">
+
+                        <ul class="list-inline float-right mb-0">
+                            <li class="list-inline-item notification-list dropdown d-none d-sm-inline-block">
+                                <form role="search" class="app-search">
+                                    <div class="form-group mb-0">
+                                        <input type="text" class="form-control" placeholder="Search..">
+                                        <button type="submit"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </form>
+                            </li>
+
+                            <li class="list-inline-item dropdown notification-list">
+                                <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user"
+                                    data-toggle="dropdown" href="#" role="button" aria-haspopup="false"
+                                    aria-expanded="false">
+                                    <img src="assets/images/users/user-1.jpg" alt="user" class="rounded-circle">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated profile-dropdown ">
+                                    <a class="dropdown-item" href="#"><i
+                                            class="mdi mdi-account-circle m-r-5 text-muted"></i> Profile</a>
+                                    <a class="dropdown-item" href="#"><span
+                                            class="badge badge-success mt-1 float-right">5</span><i
+                                            class="mdi mdi-settings m-r-5 text-muted"></i> Settings</a>
+                                    <a class="dropdown-item" href="#"><i
+                                            class="mdi mdi-lock-open-outline m-r-5 text-muted"></i> Lock screen</a>
+                                    <a class="dropdown-item" href="#"><i class="mdi mdi-logout m-r-5 text-muted"></i>
+                                        Logout</a>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                        <ul class="list-inline menu-left mb-0">
+                            <li class="list-inline-item">
+                                <button type="button" class="button-menu-mobile open-left waves-effect">
+                                    <i class="ion-navicon"></i>
+                                </button>
+                            </li>
+                        </ul>
+
+                        <div class="clearfix"></div>
+
+                    </nav>
+
+                </div>
+                <!-- Top Bar End -->
+
+                <div class="page-content-wrapper ">
+
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="float-right page-breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="#">Drixo</a></li>
+                                        <li class="breadcrumb-item active">Dashboard</li>
+                                    </ol>
+                                </div>
+                                <h5 class="page-title">Dashboard</h5>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card mini-stat m-b-30">
+                                    <div class="p-3 bg-primary text-white">
+                                        <div class="mini-stat-icon">
+                                            <i class="ti ti-users float-right mb-0"></i>
+                                        </div>
+                                        <h6 class="text-uppercase mb-0">New users</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="border-bottom pb-4">
+                                            <span class="badge badge-success"> +11% </span> <span
+                                                class="ml-2 text-muted">From previous period</span>
+                                        </div>
+                                        <div class="mt-4 text-muted">
+                                            <div class="float-right">
+                                                <p class="m-0">Last : 0</p>
+                                            </div>
+                                            <h5 class="m-0">0<i class="mdi mdi-arrow-up text-success ml-2"></i></h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card mini-stat m-b-30">
+                                    <div class="p-3 bg-primary text-white">
+                                        <div class="mini-stat-icon">
+                                            <i class="ti ti-tournament float-right mb-0"></i>
+                                        </div>
+                                        <h6 class="text-uppercase mb-0">courses</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="border-bottom pb-4">
+                                            <span class="badge badge-success"> +11% </span> <span
+                                                class="ml-2 text-muted">From previous period</span>
+                                        </div>
+                                        <div class="mt-4 text-muted">
+                                            <div class="float-right">
+                                                <p class="m-0">Last : 0</p>
+                                            </div>
+                                            <h5 class="m-0">0<i class="mdi mdi-arrow-up text-success ml-2"></i></h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card mini-stat m-b-30">
+                                    <div class="p-3 bg-primary text-white">
+                                        <div class="mini-stat-icon">
+                                            <i class="ti ti-users-group float-right mb-0"></i>
+                                        </div>
+                                        <h6 class="text-uppercase mb-0">Players</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="border-bottom pb-4">
+                                            <span class="badge badge-success"> +11% </span> <span
+                                                class="ml-2 text-muted">From previous period</span>
+                                        </div>
+                                        <div class="mt-4 text-muted">
+                                            <div class="float-right">
+                                                <p class="m-0">Last : 0</p>
+                                            </div>
+                                            <h5 class="m-0">0<i class="mdi mdi-arrow-up text-success ml-2"></i></h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card mini-stat m-b-30">
+                                    <div class="p-3 bg-primary text-white">
+                                        <div class="mini-stat-icon">
+                                            <i class="ti ti-soccer-field float-right mb-0"></i>
+                                        </div>
+                                        <h6 class="text-uppercase mb-0">New Teams</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="border-bottom pb-4">
+                                            <span class="badge badge-success"> +11% </span> <span
+                                                class="ml-2 text-muted">From previous period</span>
+                                        </div>
+                                        <div class="mt-4 text-muted">
+                                            <div class="float-right">
+                                                <p class="m-0">Last : 0</p>
+                                            </div>
+                                            <h5 class="m-0">0<i class="mdi mdi-arrow-up text-success ml-2"></i></h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xl-8">
+                                <div class="card m-b-30">
+                                    <div class="card-body">
+                                        <h4 class="mt-0 header-title">Email Sent</h4>
+
+                                        <ul class="list-inline widget-chart m-t-20 text-center">
+                                            <li>
+                                                <h4 class=""><b>3652</b></h4>
+                                                <p class="text-muted m-b-0">Marketplace</p>
+                                            </li>
+                                            <li>
+                                                <h4 class=""><b>5421</b></h4>
+                                                <p class="text-muted m-b-0">Last week</p>
+                                            </li>
+                                            <li>
+                                                <h4 class=""><b>9652</b></h4>
+                                                <p class="text-muted m-b-0">Last Month</p>
+                                            </li>
+                                        </ul>
+
+                                        <div id="morris-area-example" style="height: 300px"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4">
+                                <div class="card m-b-30">
+                                    <div class="card-body">
+                                        <h4 class="mt-0 header-title">Revenue</h4>
+
+                                        <ul class="list-inline widget-chart m-t-20 text-center">
+                                            <li>
+                                                <h4 class=""><b>5248</b></h4>
+                                                <p class="text-muted m-b-0">Marketplace</p>
+                                            </li>
+                                            <li>
+                                                <h4 class=""><b>321</b></h4>
+                                                <p class="text-muted m-b-0">Last week</p>
+                                            </li>
+                                            <li>
+                                                <h4 class=""><b>964</b></h4>
+                                                <p class="text-muted m-b-0">Last Month</p>
+                                            </li>
+                                        </ul>
+                                        <div id="morris-bar-example" style="height: 300px"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end row -->
+
+                    </div><!-- container fluid -->
+
+                </div> <!-- Page content Wrapper -->
+
+            </div> <!-- content -->
+
+
+        </div>
+        <!-- End Right content here -->
+
+    </div>
+    <!-- END wrapper -->
+
+
+    <!-- jQuery  -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/modernizr.min.js"></script>
+    <script src="assets/js/detect.js"></script>
+    <script src="assets/js/fastclick.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/jquery.blockUI.js"></script>
+    <script src="assets/js/waves.js"></script>
+    <script src="assets/js/jquery.nicescroll.js"></script>
+    <script src="assets/js/jquery.scrollTo.min.js"></script>
+
+    <!-- skycons -->
+    <script src="assets/plugins/skycons/skycons.min.js"></script>
+
+    <!-- skycons -->
+    <script src="assets/plugins/peity/jquery.peity.min.js"></script>
+
+    <!--Morris Chart-->
+    <script src="assets/plugins/morris/morris.min.js"></script>
+    <script src="assets/plugins/raphael/raphael-min.js"></script>
+
+    <!-- dashboard -->
+    <script src="assets/pages/dashboard.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
